@@ -1,0 +1,98 @@
+Project Documentation
+
+1.1. Project Overview
+
+Barb Shoe Store specializes in custom-made shoes. The project involves developing a backend system to manage inventory, sales, and deliveries, accessible by both admin and customers.
+
+1.2. Requirements Analysis
+
+Functional Requirements for Admin:
+Add new products with stock quantity and variations.
+Edit product details.
+View stock levels.
+Receive stock notifications.
+Hide specific products from customers.
+Specify product variations.
+
+Functional Requirements for Customers:
+View available products.
+Select products to buy.
+Mock the purchase process.
+
+2. Documentation
+
+2.1. API Documentation
+
+Endpoints for Admin:
+POST /products: Add a new product
+PUT /products/:id: Edit an existing product
+GET /products: List all products
+GET /products/:id: Get product details
+DELETE /products/:id: Delete a product
+GET /stock-notifications: Get stock notifications
+
+Endpoints for Customers:
+GET /products: View available products
+GET /products/:id: View product details
+POST /cart: Add product to cart
+GET /cart: View cart
+POST /checkout: Mock checkout process
+
+2.2. Database Schema
+
+Products Collection:
+`name`: String
+`description`: String
+`price`: Number
+`stock`: Number
+`variations`: [Object] (size, color, material)
+`isHidden`: Boolean
+
+2.3. System Architecture
+
+Components
+Backend API: Node.js with Express.js
+Database: MongoDB
+
+3.  Project Plan
+
+3.1. Milestones and Deliverables
+
+Week 1: Understanding the Project
+Project documentation and plan
+Project sketching and brainstorming
+
+Week 2: Setup and Initial Configuration
+Project setup and configuration
+Initialize Node.js and Express.js
+
+Week 3: Develop Admin Functionality
+Implement product CRUD operations
+Setup stock management and notifications
+
+Week 4: Customer Functionality and Final Testing
+Implement product listing and details view
+Develop cart and checkout APIs
+Conduct unit and integration tests
+Deploy to staging and production environments
+
+3.2. Tasks and Subtasks
+
+Setup
+Initialize Node.js project
+Configure MongoDB
+
+Admin Features
+Implement `/products` POST endpoint
+Implement `/products/:id` PUT endpoint
+Develop stock notification logic
+Implement hide product functionality
+
+Customer Features:
+Develop `/products` GET endpoint
+Implement `/products/:id` GET endpoint
+Create cart API endpoints
+
+Testing and Deployment:
+Write tests for all endpoints
+Deploy to production
